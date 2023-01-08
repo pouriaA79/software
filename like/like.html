@@ -154,6 +154,7 @@
         image.src = "./Assets/like.svg";
         if (i == 1) {
           data.liked = false;
+          // SEND POST METHOD TO BACKEND TO CHNAGE LIKED STATUS OF MOVIE FOR USER
         }
       } else {
         btn.style.backgroundColor = `rgba(220,220,220,0.3)`;
@@ -163,6 +164,7 @@
         image.src = "./Assets/dislike.svg";
         if (i == 1) {
           data.liked = true;
+          // SEND POST METHOD TO BACKEND TO CHNAGE LIKED STATUS OF MOVIE FOR USER
         }
       }
     };
