@@ -49,11 +49,12 @@
       margin: 0 auto;
     }
     .section2 {
-      width: 100%;
+      width: 70%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 0 auto;
     }
     .h3 {
       text-align: center;
@@ -73,7 +74,7 @@
       margin-top: 0.5rem;
     }
     .buttonBox {
-      width: 60%;
+      width: 40%;
       margin: 0 auto;
     }
     .btn {
@@ -93,11 +94,16 @@
       border-radius: 5rem;
       margin-bottom: 2rem;
       height: 40%;
+      overflow: scroll;
     }
     .bottom {
       height: 40%;
       border-top: 0.1rem solid #eee;
       border-radius: 50rem;
+    }
+    ::-webkit-scrollbar {
+      width: 0;
+      height: 0;
     }
   </style>
   <body>
@@ -113,7 +119,7 @@
               </div>
               <div class="section">
                 <p class="p">Genre :</p>
-                <input type="text" name="Genre" id="Genre" class="input" />
+                <input type="text" name="genre" id="genre" class="input" />
               </div>
               <div class="section">
                 <p class="p">Year :</p>
@@ -129,7 +135,7 @@
           </div>
           <div class="bottom">
             <h3 class="h3" style="margin-top: 2rem">
-              Search For Actors/Director
+              Search For Actor/Director
             </h3>
             <div class="section2">
               <p class="p">Name :</p>
@@ -143,5 +149,22 @@
       </div>
     </div>
   </body>
-  <script></script>
+  <script>
+    let checker = () => {
+      let name = document.querySelector("#name");
+      let year = document.querySelector("#year");
+      let genre = document.querySelector("#genre");
+      let nameA = document.querySelector("#NameA");
+
+      if (name.value || year.value || genre.value) {
+        //  CODE FOR GETTENG DATA WITH THIS PROPERTY
+      } else if (nameA.value) {
+        // CODE FOR GETTING DATA FOR ACTOR OR DIRECTOR
+      } else {
+        alert("Your Inputs Are Empty!");
+      }
+    };
+    let btn = document.querySelector(".btn");
+    btn.addEventListener("click", () => checker());
+  </script>
 </html>
